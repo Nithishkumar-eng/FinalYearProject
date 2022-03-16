@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="img-container">
+            <img id="logo" src="./Images/ACGCET-New.png" alt="accet logo">
+        </div>
+        <div class="buttons-container">
+                <div id="admin-container">
+                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;background-color: #093483;">Login As Admin</button>
+
+                    <div id="id02" class="modal">
+                    
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                        <div class="imgcontainer">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="./Images/avatar.png" alt="Avatar" class="avatar">
+                        </div>
+
+                        <div class="contains">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                            
+                        <button type="submit">Login</button>                      
+                        </div>
+
+                        <div class="contains" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                        </div>
+                    </form>
+                    </div>
+
+                </div>
+                <div id="form-container" >
+                    <button id="btn-login" onclick="document.getElementById('id01').style.display='block'">Login As Student</button>   
+                    <div id="id01" class="modal">
+                
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="./Images/avatar.png" alt="Avatar" class="avatar">
+                        </div>
+                    
+                        <div class="contains">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+                    
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+                            
+                            <button id="student-login" type="submit">Login</button>
+                            
+                        </div>
+                    
+                        <div class="contains" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            
+                        </div>
+                    </form>
+                    </div>
+                </div>
+        </div>  
+    </div>
+    <div class="slideshow-container">
+
+
+        <div class="mySlides fade">
+          
+          <img class="carousel" src="Images/accet.jpeg" style="width:100%">
+          
+        </div>
+        
+        <div class="mySlides fade">
+          
+          <img  class="carousel" src="./Images/meeting.jpg" style="width:100%">
+          
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <script src="./script.js"></script>
+</body>
+</html>
