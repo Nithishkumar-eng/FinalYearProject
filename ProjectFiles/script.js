@@ -56,4 +56,68 @@ for(let i=0;i<Arraycivil.length;i++){
 }
 document.querySelector(".totalcivil").innerHTML=tCivil;
 
+// Adding upcoming drive dynamically
+
+function addCompany(){
+
+    let cname = document.getElementById('companyName').value;
+    let due = document.getElementById('lastDate').value;
+    let link = document.getElementById('applyLink').value;
+
+    let upcomingDrive=document.querySelector('.upcoming-drives');
+    let div = document.createElement('div');
+    div.classList.add('card');
+
+    let h4 = document.createElement('h4');
+    let h4c=document.createTextNode(cname);
+    h4.appendChild(h4c);
+    div.appendChild(h4);
+
+    let p =document.createElement('p');
+    let text = document.createTextNode("Last date to apply : ");
+    p.appendChild(text);
+    div.appendChild(p);
+
+    let span = document.createElement('span');
+    let day = document.createTextNode(due);
+    span.appendChild(day);
+    div.appendChild(span);
+
+    let p2=document.createElement('p');
+    let a = document.createElement('a');
+    let click = document.createTextNode("click here to apply");
+    a.appendChild(click);
+    let attr = document.createAttribute('href');
+    attr.value=link;
+    a.setAttributeNode(attr);
+    p2.appendChild(a);
+    div.appendChild(p2);
+
+    upcomingDrive.appendChild(div)
+   
+
+}
+function removeCompany(event){
+    let span = event.target.currentTarget;
+    span.parentNode.style.display = 'none';
+}
+
+//ADD NEW RECORD
+function newRecord(){
+    
+    let i1=document.getElementById('sno').innerHTML;
+    // let i2 = document.getElementById('NewCompanyName').value;
+    // let i3 = document.getElementById('ece').value;
+    // let i4 = document.getElementById('cse').value;
+    // let i5 = document.getElementById('eee').value;
+    // let i6 = document.getElementById('mech').value;
+    // let i7 = document.getElementById('civil').value;
+    let row = document.createElement('tr');
+    // let c1 = document.createElement('td');
+    // let c1data = document.createTextNode(i1);
+    // c1.appendChild(c1data);
+    // row.appendChild(c1);
+    // let table = document.getElementById('table');
+    let last = document.getElementById('totals');
+}
 
