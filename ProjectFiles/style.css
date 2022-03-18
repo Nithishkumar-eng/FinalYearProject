@@ -136,7 +136,14 @@ input[type=text], input[type=password] {
     font-size: 35px;
     font-weight: bold;
   }
-  
+  .closeComp{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+  }
   .close:hover,
   .close:focus {
     color: red;
@@ -316,4 +323,24 @@ footer{
     background-color: #000;
     color: white;
 }
-  
+/*ADD DRIVE*/
+.add-drive,.add-record{
+  width: 120px;
+  outline: 0;
+  margin: 0;
+  padding: 12px 14px;
+  background-color: #1c60dd;
+  color: white;
+  border-radius: 8px;
+}
+.add-record{
+  float: left;
+}
+.textbox{
+  width: 100%;
+  outline: 0;
+  padding: 5px 2px;
+}
+.label{
+  margin-top: 8px;
+}
